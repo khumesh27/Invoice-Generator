@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+button {
+    background: #14336b;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.logout-btn {
+    background: rgb(131, 46, 46);
+    padding: 5px 1px;
+    font-size: 12px;
+    float: right;
+    margin-top: -20px;
+    width: 100px; 
+}
+
+nav {
+    background: #333;
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+#error-msg {
+    color: red;
+}
+
+#download-invoice {
+    display: none;
+    margin-top: 10px;
+    background: rgb(34, 101, 135);
+}
+#invoice {
+    width: 80%;
+    margin: auto;
+    font-family: Arial, sans-serif;
+    border: 1px solid #ccc;
+    padding: 20px;
+    background: #fff;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+h1 {
+    font-size: 24px;
+    text-align: center;
+}

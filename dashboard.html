@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <h2>Admin Panel</h2>
+        <button class="logout-btn" onclick="logout()">Log Out</button>
+    </nav>
+
+    <div class="container">
+        <h3>Add Customer</h3>
+        <form onsubmit="return addCustomer(event)">
+            <input type="text" id="customer-name" placeholder="Customer Name" required>
+            <input type="text" id="mobile" placeholder="Mobile Number" required>
+            <input type="text" id="address" placeholder="Address" required>
+            <input type="text" id="gst" placeholder="GST No." required>
+            <input type="number" id="current-reading" placeholder="Current Reading" required>
+            <button type="submit">Add Customer</button>
+        </form>
+        
+        <h3>Generate Invoice</h3>
+        <form onsubmit="return generateInvoice(event)">
+            <select id="customer-list"></select>
+            <input type="number" id="previous-reading" placeholder="Previous Reading" required>
+            <input type="number" id="rent" placeholder="Rent Amount" required>
+            <input type="number" id="free-copies" placeholder="Free Copies Count" required>
+            <input type="number" id="rate" placeholder="Rate Per Reading" required>
+            <select id="gst-type">
+                <option value="cgst">CGST (9%)</option>
+                <option value="igst">IGST (18%)</option>
+            </select>
+            <button type="submit">Generate Invoice</button>
+        </form>
+
+        <div id="invoice-result"></div>
+        <button id="download-invoice" onclick="downloadInvoice()" style="display: none;">Download Invoice</button>
+
+        <!-- Guide Button -->
+        <button onclick="redirectToGuide()">Guide</button>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <script src="script.js"></script>
+
+    <script>
+        function redirectToGuide() {
+            window.location.href = "guide.html";
+        }
+    </script>
+
+</body>
+</html>
